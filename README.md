@@ -17,12 +17,14 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
         ```bash
         docker-compose up -d
         ```
+   
   ii.  Akses Konsol:
         * QuestDB Web Console: `http://localhost:9000`
         * Grafana Dashboard: `http://localhost:3000` (user/pass: admin/admin) 
 
   iii.  Buat Tabel di QuestDB:
         Akses QuestDB Web Console untuk buat tabel data sensor:
+        
     ```sql
     CREATE TABLE dht_sensor_data (
         timestamp TIMESTAMP,
