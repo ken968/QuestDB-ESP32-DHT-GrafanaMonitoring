@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  questdb:
+    image: questdb/questdb
+    container_name: questdb
+    ports:
+      - "9000:9000" # Web Console
+      - "8812:8812" # Grafana Connector
+      - "9009:9009" # InfluxDB Line Protocol (ILP)
+    volumes:
+      - questdb_data:/var/lib/questdb
+    restart: unless-stopped
+  grafana:
+    image: grafana/grafana
+    container_name: grafana
+    ports:
+      - "3000:3000"
+    depends_on:
+      - questdb
+    environment:
+      - GF_INSTALL_PLUGINS=questdb-questdb-datasource
+    volumes:
+      - grafana_data:/var/lib/grafana
+    restart: unless-stopped
+
+volumes:
+  questdb_data:
+  grafana_data:
