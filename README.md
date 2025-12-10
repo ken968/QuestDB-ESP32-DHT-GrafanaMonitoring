@@ -4,6 +4,7 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
 Daftar Kebutuhan (Prerequisites):
 - ESP32
 - DHT22 Sensor
-- Docker Desktop (untuk start QuestDB)
+- Docker Desktop (untuk start QuestDB & Grafana)
 - Arduino IDE
 - Grafana
+- Questdb
