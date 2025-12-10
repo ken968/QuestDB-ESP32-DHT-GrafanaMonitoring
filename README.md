@@ -5,6 +5,7 @@ Daftar Kebutuhan (Prerequisites):
 - ESP32
 - DHT22 Sensor
 - Docker Desktop (untuk start QuestDB & Grafana)
-- Arduino IDE
 - Grafana
 - Questdb
+- Arduino IDE
+- Library (DHT sensor library, Adafruit Unified Sensor, ArduinoHttpClient)
