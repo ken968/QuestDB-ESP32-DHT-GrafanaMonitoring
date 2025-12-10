@@ -24,12 +24,12 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
   iii.  Buat Tabel di QuestDB:
         Akses QuestDB Web Console untuk buat tabel data sensor:
         ```sql
-        CREATE TABLE dht_sensor_data (
-            timestamp TIMESTAMP,
-            temperature DOUBLE,
-            humidity DOUBLE
-        ) TIMESTAMP (timestamp);
-        ```
+       CREATE TABLE dht_sensor_data (
+        timestamp TIMESTAMP,
+        temperature DOUBLE,
+        humidity DOUBLE
+       ) TIMESTAMP (timestamp);
+       ```
     
 3. Setup ESP32
    pin --> 4
@@ -58,4 +58,4 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
       ```
       
 8. Hasil (Dasboard monitoring)
-   ![Dashboard Monitoring DHT22](grafana dashboard.png)
+   ![Dashboard Monitoring DHT22](grafana_dashboard.png)
