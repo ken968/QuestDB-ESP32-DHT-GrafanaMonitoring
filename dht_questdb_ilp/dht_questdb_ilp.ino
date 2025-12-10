@@ -11,7 +11,7 @@ const int questdbPort = 9009;
 #define DHTTYPE DHT22
 
 const char* DEVICE_ID = "ESP32_KAMAR_A";
-const long SEND_INTERVAL = 15000;
+const long SEND_INTERVAL = 15000; //15 detik
 
 DHT dht(DHTPIN, DHTTYPE);
 WiFiClient client;
