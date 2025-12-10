@@ -49,7 +49,11 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
      
 5. Setup Grafana
    Plugin QuestDB Data Source sudah terinstal otomatis (karna `docker-compose.yml`).
-   kalau mau hanya install pluggin use 'docker run -p 3000:3000 -e GF_INSTALL_PLUGINS=questdb-questdb-datasource grafana/grafana-oss'
+   kalau hanya install pluggin use :  docker run -p 3000:3000 -e GF_INSTALL_PLUGINS=questdb-questdb-datasource grafana/grafana-oss
+   
+   ```bash
+        docker run -p 3000:3000 -e GF_INSTALL_PLUGINS=questdb-questdb-datasource grafana/grafana-oss
+   ```
 
    * Tambahkan Data Source: Di Grafana, tambahkan Data Source baru:
      
