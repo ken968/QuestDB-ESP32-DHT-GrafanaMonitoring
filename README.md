@@ -13,25 +13,26 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
 2. Setup Database & Visualisasi (Docker Compose)
    menggunakan Docker Compose untuk menjalankan QuestDB dan Grafana secara instan.
 
-   i.  Jalankan Stack:
+   *  Jalankan Stack:
+     
         ```bash
         docker-compose up -d
         ```
    
-  ii.  Akses Konsol:
-        * QuestDB Web Console: `http://localhost:9000`
-        * Grafana Dashboard: `http://localhost:3000` (user/pass: admin/admin) 
-
-  iii.  Buat Tabel di QuestDB:
-        Akses QuestDB Web Console untuk buat tabel data sensor:
+    *  Akses Konsol:
+        i  QuestDB Web Console: `http://localhost:9000`
+        ii Grafana Dashboard: `http://localhost:3000` (user/pass: admin/admin) 
+ 
+    *  Buat Tabel di QuestDB:
+       Akses QuestDB Web Console untuk buat tabel data sensor:
         
-    ```sql
-    CREATE TABLE dht_sensor_data (
-        timestamp TIMESTAMP,
-        temperature DOUBLE,
-        humidity DOUBLE
-    ) TIMESTAMP (timestamp);
-    ```
+       ```sql
+       CREATE TABLE dht_sensor_data (
+           timestamp TIMESTAMP,
+           temperature DOUBLE,
+           humidity DOUBLE
+       ) TIMESTAMP (timestamp);
+       ```
     
 3. Setup ESP32
    pin --> 4
