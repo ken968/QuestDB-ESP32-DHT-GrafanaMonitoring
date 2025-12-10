@@ -20,7 +20,9 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
         ```
    
     *  Akses Konsol:
+      
         i  QuestDB Web Console: `http://localhost:9000`
+       
         ii Grafana Dashboard: `http://localhost:3000` (user/pass: admin/admin) 
  
     *  Buat Tabel di QuestDB:
@@ -36,18 +38,25 @@ Sistem monitoring suhu dan kelembaban real-time menggunakan ESP32, penyimpanan T
     
 3. Setup ESP32
    pin --> 4
+
    * konfigurasi source code
+     
      i. uae file dhtquestdb.ino
+     
      ii. update ssid & passwd
+     
      iii. update questdb host (set ke ip lokal yg menjalankan docker)
      
-4. Setup Grafana
+5. Setup Grafana
    Plugin QuestDB Data Source sudah terinstal otomatis (karna `docker-compose.yml`).
    kalau mau hanya install pluggin use 'docker run -p 3000:3000 -e GF_INSTALL_PLUGINS=questdb-questdb-datasource grafana/grafana-oss'
 
    * Tambahkan Data Source: Di Grafana, tambahkan Data Source baru:
+     
       i. Tipe: QuestDB
+     
       ii Host: `http://questdb:8812` (Gunakan nama *service* Docker)
+     
    * Import Dashboard: Impor file `Grafana_Setup/dashboard.json` (jika disediakan) atau buat dashboard secara manual menggunakan Query SQL:
   
       ```sql
